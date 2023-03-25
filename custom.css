@@ -13,7 +13,6 @@
 nav {
   width: 65%;
   padding: 1%;
-  
   text-align: right;
 }
 ul {
@@ -21,13 +20,15 @@ list-style: none;
 
 }
 .heroimg {
-  height: 600px;
+  height: 400px;
   padding: 25px;
   margin: auto;
   border: 3px solid #373738;
   width: 30%;
   margin-top: 5%;
- 
+}
+#myButton{
+  background-color: red;
 }
 .content {
   margin: 0 auto;
@@ -47,4 +48,64 @@ nav li {
 }
 .content img {
   text-align: center;
+}
+
+.flexContainer{
+  display: flex;
+}
+#footerMenu {
+  position: absolute;
+  float: center;
+  padding: 10px 0;
+  margin-left: 10px;
+}
+.mySkills{
+  margin: 5%;
+}
+
+#mySkills1 {
+  margin: auto;
+  width: 30%;
+  padding: 3%;
+  }
+#mySkills2 {
+  width: 30%;
+  margin: auto;
+  padding: 3%;
+}
+#mySkills3 {
+  width: 30%;
+  margin: auto;
+  padding: 3%;
+}
+.workGrid{
+  display: grid;
+  grid-template-areas:'item1 item2';
+}
+.myWork{
+  margin: 5%;
+  
+}
+.item1 {
+  grid-area: item1;
+  width: 40%;
+}
+.item2 {
+  grid-area: item2;
+  width: 40%;
+}
+
+h1 {
+  text-align: left;
+  padding: auto;
+}
+h3 {
+  text-align: center;
+  border: #373738;
+}
+
+@media only screen and (max-width:600) {
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr;
+  grid grid-template-areas: 'item1 item2';
 }
