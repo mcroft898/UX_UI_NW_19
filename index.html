@@ -1,7 +1,9 @@
 <html>
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <title>Matthew Crofts Portfolio</title>
   <link rel="stylesheet"  href="custom.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body>
   <header class="navigation">
@@ -26,10 +28,58 @@
       <p id="paragraph">My name is Matthew Croft. I have a passion for creating and building things. Outdide of design you can
         find me Cooking, Woodworking or exploring the great outdoors.</p>
       <button class="button">Download Resume</button>
+      <button id="myButton">Hit me</button>
     </div>
   </section>
+
+  <!--My skills coded using CSS Flex-->
+ 
+  <section class="mySkills">
+    <h1>My UX Skills</h1>
+    <div class="flexContainer">
+<!--I can not figure out how to get the title to center above the cards-->
+      <div id="mySkills1">
+        <img src="images/testing (2).png" alt="User testing icon" class="responsive">
+        <h3>User Testing</h3>
+        <p>Asking open ended questions to understand users’ experiences, perceptions, and pain points will help find the best solution that also aligns with business goals.</p>
+      </div>
+      <div id="mySkills2">
+        <img src="images/website-development.png" alt="Web Development" class="responsive">
+        <h3>Web Development</h3>
+        <p>Developing personas, completing user interviews, and empathy mapping will highlight the needs, goals, and pain points to target when designing effective products and services to meet user needs.</p>
+      </div>
+      <div id="mySkills3">
+        <img src="images/about-us.png" alt="User Research" class="responsive">
+        <h3>User Research</h3>
+        <p>Studying market trends, analyzing competition, and understanding the pain points of users can help identify business problems and possible solutions.</p>
+      </div>
+    </div>
+  </section>
+  <!--My Work Cards-->
+  <section class="myWork">
+    <h1>My Work</h1>
+    <div class=" workGrid">
+      <div>
+        <img src="images/Screenshot 2023-03-16 at 12.28.58 PM.png" alt="PAWS Chicago" class="responsive" width="50%">
+      <div class="item1">
+        <h4>PAWS Chicago</h4>
+        <p>Non-profit animal welfare organization with the mission to end the killing of homeless and abandoned animals</p>
+        <button>View Case Study</button>
+      </div>
+      </div>
+      <div>
+        <img src="images/Screenshot 2023-03-16 at 12.29.12 PM.png" alt="CARAVAN" class="responsive" width="50%">
+      <div class="item2">
+        <h4>CARAVAN</h4>
+        <p>An app where remote workers can work remote, anywhere.</p>
+        <button>View Case Study</button>
+      </div>
+      </div>
+    </div>
+    <h3>View All Projects</h3>
+  </section>
   <footer>
-    <ul>
+    <ul id="footerMenu">
       <il>Contact</il>
       <il>Work</il>
       <il>Skills</il>
@@ -39,3 +89,17 @@
   </footer>
 </body>
 </html>
+<script>
+  $(document).ready(function(){
+    $('#myButton').click(function() {
+      if ($(this).css('background-color') === 'rgb(255, 0, 0)'){
+        $(this).css('background-color', 'blue');
+      }
+      else if($(this).css('background-color') == 'rgb(0, 0, 255)'){
+        $(this).css('background-color', 'red');
+      }
+  
+});
+
+  });
+</script>
